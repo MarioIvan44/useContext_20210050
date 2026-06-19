@@ -18,7 +18,9 @@ function App() {
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<Dashboard />} />
             </Route>
-            <Route path="/information" element={<Information />} />
+            <Route element={<PrivateRoute />}>
+              <Route path="/information" element={<Information />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
